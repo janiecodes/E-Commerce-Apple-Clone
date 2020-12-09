@@ -1,12 +1,12 @@
 import {Link} from 'react-router-dom';
 const OrderComplete = (props) => {
     return (
-        <section>
-            <h1>Thank you for your order!</h1>
+        <section className='order-complete-component'>
+            <h1>Thank you for shopping at Apple!</h1>
             <p>
-                We appreciate your business!
+               Thanks for your order! Please expect your item(s) to arrive in 7-10 business days.
             </p>
-            <Link to={'/sms'}>Send SMS Confirmation</Link>
+            <div><Link to={'/sms'}>For SMS updates, click here.</Link></div>
         </section>
     )
 }

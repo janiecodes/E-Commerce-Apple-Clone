@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'
+import { withRouter } from 'react-router-dom';
 
 
 function SMS() {
@@ -18,12 +19,12 @@ function SMS() {
   return (
     <div style={styles.body}>
       <div style={styles.form}>
-        <h1>Apple</h1>
+        <h1>Apple SMS Notification</h1>
         <input 
           style={styles.nameInput} 
           onChange={(e) => setName(e.target.value)} 
           type='text'
-          placeholder='Name'
+          placeholder='Full Name'
            />
            <input 
           style={styles.phoneNumber} 
@@ -31,11 +32,11 @@ function SMS() {
           type='text'
           placeholder='Phone Number'
            />
-        <input
+        {/* <input
           style={styles.message} 
           onChange={(e) => setMessage(e.target.value)}
           placeholder='Message'
-          ></input>
+          ></input> */}
         <button 
           style={styles.button} 
           onClick={() => send()}>Send</button>
@@ -57,20 +58,25 @@ const styles = {
   },
   form: {
     display: 'flex',
+    color: 'white',
+    fontSize: 20,
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'space-evenly',
     height: 500,
     background: 'lightgrey',
-    width: 450,
-    boxShadow:'2px 1px 3px 1px black'
+    width: 500,
+    borderRadius:4,
+    boxShadow:'2px 1px 3px 1px black',
+    fontFamily:'SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif',
   },
   nameInput: {
     height: 40,
     fontSize: 35,
     width: 350,
     border: '1px solid black',
-    outline: 'none'
+    outline: 'none',
+    fontFamily:'SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif',
   },
 
   phoneNumber: {
@@ -78,7 +84,8 @@ const styles = {
     fontSize: 35,
     width: 350,
     border: '1px solid black',
-    outline: 'none'
+    outline: 'none',
+    fontFamily:'SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif',
   },
 
   message: {
@@ -93,11 +100,12 @@ const styles = {
   button: {
     height: 45,
     width: 200,
-    background: 'black',
-    borderRadius: 10,
+    borderRadius:4,
+    background:'#0070c9',
     color: 'white',
     fontSize: 25,
     textAlign: 'center',
-    outline: 'none'
+    outline: 'none',
+    fontFamily:'SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif',
   }
 }

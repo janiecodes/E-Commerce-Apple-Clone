@@ -685,7 +685,12 @@ cart ul {
     font-size: 18px;
 }
 
-
+.order-complete-component{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 @media screen and (max-width: 800px){
 
@@ -723,3 +728,4 @@ cart ul {
     }
 
 }
+

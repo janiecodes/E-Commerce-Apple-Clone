@@ -28,7 +28,7 @@ class Checkout extends Component {
                 <p>Show Order Summary: {this.props.cartTotal}</p>
                 
             </header>
-            
+            <h1>How do you want to pay?</h1>
             <div className="stripeCheckout">
                   <StripeCheckout
                     description={ "Apple Clone Demonstration" }
