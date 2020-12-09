@@ -1,0 +1,725 @@
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+  }
+
+
+.nav-component {
+    height: 8vh;
+    width: 100vw;
+    background-color: #333333;
+    /* background-color: #060606; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+a {
+    text-decoration: none;
+    color: #c2c2c2;
+    display: flex;
+    align-items: center;
+}
+
+.apple-logo {
+    height: 25px;
+}
+
+
+.cart-dropdown:hover, .cart-dropdown:focus {
+    background-color: white;
+}
+
+
+.dropdown-content {
+    background-color: white;
+    min-width: 160px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    z-index: 1;
+    position: absolute;
+}
+
+.dropdown-link {
+    color: #0471e3;
+}
+
+.dashboard-component {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding-top: 5%;
+}
+.dashboard-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-message{
+    font-size: 64px;
+    font-weight: 600;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.dashboard-links {
+    display: flex;  
+    flex-direction: row;
+
+}
+
+.dashboard-links > img {
+    height: 50px;
+    width: 50px;
+}
+
+.auth-component {
+    padding: 30px;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.auth-title {
+    width: 980px;
+    height: 114px;
+    font-size: 40px;
+}
+
+.auth-input-email{
+    margin: 0px 0px 14px;
+    width: 410px;
+    height: 56px;
+    
+    padding: 18px 16px 0px;
+    line-height: 1.23536;
+    font-size: 17px;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: .82353rem;
+    border-color: #d2d2d7;
+
+}
+
+.auth-input-password{
+    margin: 0px 0px 14px;
+    width: 410px;
+    height: 56px;
+    padding: 18px 16px 0px;
+    line-height: 1.23536;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 17px;
+    margin-bottom: .82353rem;
+    border-color: #d2d2d7;
+
+}
+.auth-sign-in{
+    display: flex;
+    width: 380px;
+    flex-direction: column;
+    justify-content:space-evenly;
+
+}
+
+.auth-sign-in-button {
+    color: white;
+    background-color: #0072e4;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    width: 410px;
+    height: 56px;
+    min-width: 28px;
+    padding: 18px 31px;
+    border-radius: 12px;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.auth-text {
+    font-size: 14px;
+    margin: 0px 0px 35px;
+    font-weight: 400;
+    letter-spacing: -.016em;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.auth-text-forgot {
+    color: #0072e4;
+    font-size: 17px;
+}
+
+.auth-registration-link {
+    color: #0072e4;
+    font-size: 17px;
+}
+
+.register-nav-bar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.register-nav-bar-left {
+    font-size: 20px;
+    margin-left: 35px;
+}
+
+.register-nav-bar-right {
+    display: flex;
+    justify-content: space-around;
+    width: 35vw;
+    font-size: 18px;
+}
+
+.register-header {
+    margin: 0 auto;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.register-header-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.register-form-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+}
+
+.register-name-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+
+}
+
+.register-first-name{
+    width: 215px;
+    height: 56px;
+    font-size: 17px;
+    margin-bottom: 14px;
+    padding-top: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: #333;
+    text-align: left;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: hsla(0,0%,100%,.8);
+    background-clip: padding-box;
+}
+
+.register-last-name{
+    width: 215px;
+    height: 56px;
+    font-size: 17px;
+    margin-bottom: 14px;
+    padding-top: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: #333;
+    text-align: left;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: hsla(0,0%,100%,.8);
+    background-clip: padding-box;
+}
+
+.register-country-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+
+.register-USA-input {
+    display: flex;
+    width: 415px;
+    height: 56px;
+    font-size: 17px;
+    margin-bottom: 14px;
+    padding-top: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: #333;
+    text-align: left;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: hsla(0,0%,100%,.8);
+    background-clip: padding-box;
+}
+
+.register-birthday-input {
+    display: flex;
+    width: 415px;
+    height: 56px;
+    font-size: 17px;
+    margin-bottom: 14px;
+    padding-top: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: #333;
+    text-align: left;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: hsla(0,0%,100%,.8);
+    background-clip: padding-box;
+}
+
+.register-email-input {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.register-phone-input {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.register-checkbox {
+    display: flex;
+}
+
+.register-button{
+    width: 105px;
+    height: 35px;
+    font-size: 18px;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    background-color: #0070c9;
+    background: linear-gradient(#42a1ec,#0070c9);
+    border: 1px solid #07c;
+    border-radius: 4px;
+    color: #fff;
+    min-width: 30px;
+
+    text-align: center;
+}
+.ipad-content {
+    display: flex;
+}
+
+.ipad-air-photo{
+    padding-bottom: 80px;
+}
+
+.ipad-air-info {
+    width: 422px;
+
+}
+.ipad-air-color {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 230px;
+    width: 400px;
+}
+.ipad-air-color input[type="radio"] {
+    opacity: 0;
+    display: flex;
+    width: 0;
+}
+
+.ipad-air-color label {
+    width: 150px;
+    height: 60px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #d6d6d6;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.ipad-button {
+    width: 303px;
+    font-size: 17px;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    min-width: 30px;
+    padding: 4px 15px;
+    text-align: center;
+    white-space: nowrap;
+    color: white;
+    background-color: #0070c9;
+    background: linear-gradient(#42a1ec,#0070c9);
+    border: 1px solid #07c;
+    border-radius: 4px;
+}
+
+.add-to-bag-button {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.watch-content {
+    display: flex;
+}
+
+.watch-photo{
+    padding-bottom: 80px;
+}
+
+.watch-info {
+    width: 430px;
+
+}
+.watch-color {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 230px;
+    width: 400px;
+}
+.watch-color input[type="radio"] {
+    opacity: 0;
+    display: flex;
+    width: 0;
+}
+
+.watch-color label {
+    width: 150px;
+    height: 60px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #d6d6d6;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+
+.watch-button {
+    width: 303px;
+    font-size: 17px;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    min-width: 30px;
+    padding: 4px 15px;
+    text-align: center;
+    white-space: nowrap;
+    color: white;
+    background-color: #0070c9;
+    background: linear-gradient(#42a1ec,#0070c9);
+    border: 1px solid #07c;
+    border-radius: 4px;
+}
+
+.iphone-content {
+    display: flex;
+}
+
+.iphone-photo{
+    padding-bottom: 80px;
+}
+
+.iphone-info {
+    width: 430px;
+
+}
+.iphone-color {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 230px;
+    width: 400px;
+}
+.iphone-color input[type="radio"] {
+    opacity: 0;
+    display: flex;
+    width: 0;
+}
+
+.iphone-color label {
+    width: 150px;
+    height: 60px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #d6d6d6;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+
+.iphone-button {
+    width: 303px;
+    font-size: 17px;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    min-width: 30px;
+    padding: 4px 15px;
+    text-align: center;
+    white-space: nowrap;
+    color: white;
+    background-color: #0070c9;
+    background: linear-gradient(#42a1ec,#0070c9);
+    border: 1px solid #07c;
+    border-radius: 4px;
+}
+
+.mac-component {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75vw;
+
+}
+
+.mac-title {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    color: radial-gradient(ellipse at center, #eff1ff 10%, #000 100%);
+    -webkit-background-clip: text;
+
+}
+
+.mac-products {
+    display: flex;
+}
+
+.macbook-color {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 125px;
+    width: 400px;
+}
+.macbook-color input[type="radio"] {
+    opacity: 0;
+    display: flex;
+    width: 0;
+}
+
+.macbook-color label {
+    width: 150px;
+    height: 60px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #d6d6d6;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.macbook-button {
+    width: 303px;
+    font-size: 17px;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    min-width: 30px;
+    padding: 4px 15px;
+    text-align: center;
+    white-space: nowrap;
+    color: white;
+    background-color: #0070c9;
+    background: linear-gradient(#42a1ec,#0070c9);
+    border: 1px solid #07c;
+    border-radius: 4px;
+}
+
+.cart-component {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.cart-product-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+cart ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+}
+
+.cart-product-quantity-button{
+    height: 50px;
+    width: 50px;
+    font-size: 16px;
+}
+
+.cart-total {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: flex-end;
+    align-items:center;
+    font-size: 18px;
+    
+
+}
+
+.stripeCheckout{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    justify-content: flex-end;
+}
+
+.cart-product-quantity-button {
+
+    border: 0;
+    display: inline-block;
+    background-color: transparent;
+    font-size: 24px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.edit-quantity-dropdown {
+    width: 40px;
+    padding: 12px 16px;
+    align-items: center;
+    border: none;
+    color: #1d1d1f;
+    border-color: #d2d2d7;
+    background-color: hsla(0,0%,100%,.8);
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+
+}
+
+
+.dropdown-item {
+    border: none;
+    font-size: 24px;
+    background-color: hsla(0,0%,100%,.8);
+    
+}
+
+.cart-item-remove-button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;  
+    color: #0070c9;
+    font-size: 17px;
+
+}
+
+.cart-quantity-options {
+    position: absolute;
+}
+
+.cart-product-name {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+
+}
+
+.cart-product-color {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px
+}
+
+.cart-product-quantity {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1d1d1f;
+  
+}
+
+.cart-product-price {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1d1d1f;
+    font-size: 27px
+}
+
+.cart-remove-button {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cart-review-text {
+    font-size: 40px;
+    padding-top: 20px;
+
+}
+
+.cart-return-text {
+    font-size: 18px;
+}
+
+
+
+@media screen and (max-width: 800px){
+
+    .dashboard-message {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .dashboard-links {
+        display: flex;  
+        flex-direction: column;
+    }
+
+    .ipad-air-color {
+       display: flex;
+       flex-direction: column;
+       height: 70%;
+    }
+
+    .add-to-bag-button {
+        margin-right: 230px;
+    }
+
+    .cart-component {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cart-product-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
