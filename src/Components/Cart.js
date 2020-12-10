@@ -6,7 +6,7 @@ import axios from 'axios'
 import CartItem from './CartItem'
 import {Link} from 'react-router-dom';
 import StripeCheckout from 'react-stripe-checkout';
-import OrderComplete from './OrderComplete'
+
 
 
 

@@ -16,7 +16,7 @@ const path = require('path');
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET, SECRET_KEY, REACT_APP_PUB_KEY} = process.env;
 const stripe = require('stripe')(SECRET_KEY);
 const app = express();
-
+app.use(express.static(`${__dirname}/../build`))
 app.use(express.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -93,5 +93,10 @@ description: 'Test charge from react app'
 //   return res.sendStatus(200);
 // });
 // });
+
+//HOSTING
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../build/index.html'))
+})
 
 app.listen(SERVER_PORT, () => console.log(`Connected to port ${SERVER_PORT}`))
