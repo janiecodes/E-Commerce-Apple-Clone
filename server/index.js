@@ -64,10 +64,9 @@ app.post('/api/email',emailCtrl.email)
 app.post('/api/sendSMS',twilioCtrl.sendSMS)
 
 //STRIPE
-app.post('/api/checkout', function(req, res, next) {
-  let {price} = req.body;
+app.post('/api/checkout', function(req, res, next){
 const charge = stripe.charges.create({
-amount: price, 
+amount: 1,
 currency: 'usd',
 source: req.body.token.id,
 description: 'Test charge from react app'
@@ -79,5 +78,20 @@ description: 'Test charge from react app'
   return res.sendStatus(200);
 });
 });
+// app.post('/api/checkout', function(req, res, next) {
+//   let {price} = req.body;
+// const charge = stripe.charges.create({
+// amount: price, 
+// currency: 'usd',
+// source: req.body.token.id,
+// description: 'Test charge from react app'
+// }, function(err, charge) {
+//   if (err) {
+//     console.error(err);
+//     return res.sendStatus(500)
+//   }
+//   return res.sendStatus(200);
+// });
+// });
 
 app.listen(SERVER_PORT, () => console.log(`Connected to port ${SERVER_PORT}`))

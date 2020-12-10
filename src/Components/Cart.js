@@ -70,9 +70,9 @@ const Cart = (props) => {
 
     const onToken = (token) => {
         console.log(token);
-        console.log(props.cartTotal)
+        console.log(cartTotal)
         token.card = void 0;
-        axios.post('/api/checkout', { token, price: (props.cartTotal)})
+        axios.post('/api/checkout', { token, amount: (cartTotal)* 100})
         .then(response => {
           alert('Transaction Successful')
         }).catch( (err)=> console.log(err))
@@ -118,12 +118,14 @@ const Cart = (props) => {
                 <div className='cart-total-number'> ${cartTotal}</div>
             </div>
             <div className="stripeCheckout">
-                  <Link to={'/ordercomplete'}><StripeCheckout
+                  <Link to={'/ordercomplete'}>
+                    <StripeCheckout
                     description={ "Apple Clone Demonstration" }
                     token={onToken}
                     stripeKey={ process.env.REACT_APP_PUB_KEY}
-                    amount={(props.cartTotal)}
-                  /></Link>
+                    amount={(cartTotal)}
+                    />
+                  </Link>
             </div>
 
         </div>
