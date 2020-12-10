@@ -25,15 +25,15 @@ function Watch(props){
   };
 
   return (
-    <div className="iphone-component">
-      <div className='iphone-header'>
+    <div className="watch-component">
+      <div className='watch-header'>
         <h3>Apple Watch.</h3>
         <div className='watch-content'>
         <div className="watch-photo">
           {select ? (
-            <img src={`/assets/applewatch-${productId}.jpeg`} />
+            <img className='selected-watch-photo' src={`/assets/applewatch-${productId}.jpeg`} />
           ) : (
-            <img src={`/assets/watch-photo.jpeg`} />
+            <img className='default-watch-photo' src={`/assets/watch-photo.jpeg`} />
           )}
         </div>
 

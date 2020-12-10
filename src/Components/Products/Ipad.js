@@ -33,7 +33,7 @@ function Ipad(props) {
           {select ? (
             <img src={`/assets/ipadair-${productId}.png`} />
           ) : (
-            <img width='443' height='535' src={`/assets/ipad-air-img.jpeg`} />
+            <img className='default-ipad-photo' src={`/assets/ipad-air-img.jpeg`} />
           )}
         </div>
 

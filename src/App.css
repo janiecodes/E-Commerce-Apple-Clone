@@ -35,7 +35,7 @@ a {
 
 .dropdown-content {
     background-color: white;
-    min-width: 160px;
+    width: 150px;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -316,6 +316,8 @@ a {
 }
 .ipad-content {
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .ipad-air-photo{
@@ -374,12 +376,39 @@ a {
 
 .watch-content {
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .watch-photo{
     padding-bottom: 80px;
+    width: 450px;
+    height: 400px;
 }
 
+.default-watch-photo {
+    width: 470px;
+    height: 500px;
+}
+
+.default-iphone-photo {
+    width: 500px;
+    height: 500px;
+}
+
+.default-ipad-photo {
+    width: 470px;
+    height: 550px;
+}
+
+.selected-iphone-photo{
+    width: 450px;
+    height: 400px;
+}
+.selected-watch-photo{
+    width: 450px;
+    height: 400px;
+}
 .watch-info {
     width: 430px;
 
@@ -427,10 +456,14 @@ a {
 
 .iphone-content {
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .iphone-photo{
     padding-bottom: 80px;
+    width: 300px;
+    height: 400px;
 }
 
 .iphone-info {
@@ -692,7 +725,7 @@ cart ul {
     justify-content: center;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 768px){
 
     .dashboard-message {
         display: flex;
@@ -707,14 +740,51 @@ cart ul {
         flex-direction: column;
     }
 
+    .dropdown-content {
+        width: 150px;
+        transform: translate(-80%, 0)
+    }
     .ipad-air-color {
        display: flex;
        flex-direction: column;
-       height: 70%;
+       height: 90%;
+    }
+    .ipad-air-info {
+        width: 250px;
     }
 
-    .add-to-bag-button {
-        margin-right: 230px;
+    .default-ipad-photo{
+        width: 350px;
+        height: 500px;
+    }
+
+    .default-iphone-photo {
+        width: 375px;
+        height: 500px;
+    }
+
+    .iphone-color {
+        display: flex;
+        flex-direction: column;
+        height: 90%;
+    }
+
+    .iphone-info {
+        width: 250px;
+    }
+    .default-watch-photo {
+        width: 450px;
+        height: 500px;
+    }
+
+    .watch-info {
+        width: 250px;
+    }
+
+    .watch-color {
+        display: flex;
+        flex-direction: column;
+        height: 90%;
     }
 
     .cart-component {

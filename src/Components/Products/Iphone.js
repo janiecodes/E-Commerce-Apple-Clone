@@ -31,9 +31,9 @@ function Iphone(props){
             <div className='iphone-content'>
             <div className="iphone-photo">
               {select ? (
-                <img src={`/assets/iphone-${productId}.png`} />
+                <img className='selected-iphone-photo' src={`/assets/iphone-${productId}.png`} />
               ) : (
-                <img src={`/assets/iphone-photo.jpeg`} />
+                <img className='default-iphone-photo' src={`/assets/iphone-photo.jpeg`} />
               )}
             </div>
     
