@@ -64,35 +64,28 @@ app.post('/api/email',emailCtrl.email)
 app.post('/api/sendSMS',twilioCtrl.sendSMS)
 
 //STRIPE
-app.post('/api/checkout', function(req, res, next){
-const charge = stripe.charges.create({
-amount: 1,
-currency: 'usd',
-source: req.body.token.id,
-description: 'Test charge from react app'
-}, function(err, charge) {
-  if (err) {
-    console.error(err);
-    return res.sendStatus(500)
-  }
-  return res.sendStatus(200);
+app.post('/api/checkout', async (req, res) => {
+  const session = await stripe.checkout.sessions.create({
+    payment_method_types: ['card'],
+    line_items: [
+      {
+        price_data: {
+          currency: 'usd',
+          product_data: {
+            name: 'Apple',
+          },
+          unit_amount: 10000,
+        },
+        quantity: 1,
+      },
+    ],
+    mode: 'payment',
+    success_url: 'http://198.211.106.205:3012/',
+    cancel_url: 'http://198.211.106.205:3012/cancel',
+  });
+
+  res.json({ id: session.id });
 });
-});
-// app.post('/api/checkout', function(req, res, next) {
-//   let {price} = req.body;
-// const charge = stripe.charges.create({
-// amount: price, 
-// currency: 'usd',
-// source: req.body.token.id,
-// description: 'Test charge from react app'
-// }, function(err, charge) {
-//   if (err) {
-//     console.error(err);
-//     return res.sendStatus(500)
-//   }
-//   return res.sendStatus(200);
-// });
-// });
 
 //HOSTING
 app.get('*', (req, res) => {

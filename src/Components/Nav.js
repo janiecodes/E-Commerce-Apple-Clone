@@ -41,7 +41,7 @@ const Nav = ({logoutUser, user}) => {
                     <button onClick={cartDropdown} className='cart-dropdown'><FontAwesomeIcon icon="shopping-bag" size="lg"/></button>
                     {toggle ?
                     <div className='dropdown-content'>
-                        <Link onClick={() => {setToggle(!toggle)}} className='dropdown-link' to={`/cart`}>Check Out</Link>
+                        <Link onClick={() => {setToggle(!toggle)}} className='dropdown-link' to={'/sms'}>SMS Updates</Link>
                         <Link onClick={() => {setToggle(!toggle)}} className='dropdown-link' to={`/cart`}>Bag</Link>
                         <Link onClick={() => {setToggle(!toggle)}} className='dropdown-link' to={`/`}>Favorites</Link>
                         <Link onClick={() => {setToggle(!toggle)}} className='dropdown-link' to={`/`}>Orders</Link>

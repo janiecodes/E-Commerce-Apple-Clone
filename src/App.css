@@ -573,6 +573,20 @@ a {
     border-radius: 4px;
 }
 
+.stripeCheckout-button {
+    font-size: 17px;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    min-width: 30px;
+    padding: 4px 15px;
+    text-align: center;
+    white-space: nowrap;
+    color: white;
+    background-color: #0070c9;
+    background: linear-gradient(#42a1ec,#0070c9);
+    border: 1px solid #07c;
+    border-radius: 4px;
+}
+
 .cart-component {
     width: 80vw;
     margin: 0 auto;

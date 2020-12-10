@@ -4,10 +4,8 @@ import {useEffect, useState} from "react";
 import {getCart} from '../redux/cartReducer'
 import axios from 'axios'
 import CartItem from './CartItem'
-import {Link} from 'react-router-dom';
-import StripeCheckout from 'react-stripe-checkout';
-
-
+import { loadStripe } from '@stripe/stripe-js';
+const stripePromise = loadStripe('pk_test_51Hu6saEuoNMZwXdg2IHpYwpNq2nWbQytc2XpNbbzTgMOxQMVziy2UJAY2Mnr9j9jmFmyLRyXmT145oQHNX3W669c00P23o2TAW')
 
 
 const Cart = (props) => {
@@ -25,9 +23,26 @@ const Cart = (props) => {
         setCartTotal(totalVal)  
     }
 
-    // function quantityDropdown(){
-    //     setToggle(!toggle)
-    // }
+    const handleClick = async (event) => {
+        // Get Stripe.js instance
+        const stripe = await stripePromise;
+    
+        // Call your backend to create the Checkout Session
+        const response = await fetch('/api/checkout', { method: 'POST' });
+    
+        const session = await response.json();
+    
+        // When the customer clicks on the button, redirect them to Checkout.
+        const result = await stripe.redirectToCheckout({
+          sessionId: session.id,
+        });
+    
+        if (result.error) {
+          // If `redirectToCheckout` fails due to a browser or network
+          // error, display the localized error message to your customer
+          // using `result.error.message`.
+        }
+      };
 
     const editQuantity = async (product_id, quantity) => {
             console.log(quantity)
@@ -50,11 +65,9 @@ const Cart = (props) => {
         }catch(error){
             console.log(error)
         }
-        console.log("DELETE")
     }
 
     useEffect(() => {
-        console.log('HIT')
         props.getCart()
         total()
     }, [JSON.stringify(props.cart.cart)])
@@ -68,46 +81,7 @@ const Cart = (props) => {
                 />
     })
 
-    const onToken = (token) => {
-        console.log(token);
-        console.log(cartTotal)
-        token.card = void 0;
-        axios.post('/api/checkout', { token, amount: (cartTotal)* 100})
-        .then(response => {
-          alert('Transaction Successful')
-        }).catch( (err)=> console.log(err))
-      }
-    // const mappedCart = props.cart.cart.map((product, index) => {
-    //     return (
-            
-    //     <div className='cart-product-info'>
     
-    //         <h1 key={product.product_name}>{product.product_name}</h1> 
-    //         <h2>{product.product_color}</h2>
-    //         <div className='quantity-dropdown'>
-    //             <button onClick={quantityDropdown} className='dropdown-btn' type='button'>{product.quantity}</button>
-    //             {toggle ? 
-    //             <ul style={{listStyle:'none'}}>
-    //             {[...Array(3).keys()].map(quantity => (
-    //               <li className='edit-quantity-dropdown' key={`input: ${quantity}`}>
-    //                 <input type="button" value={quantity + 1} onClick={() => editQuantity(product.product_id)} className="dropdown-item" />
-    //               </li>
-    //             ))}
-    //             </ul>
-    //             : null }
-    //         </div>
-            
-            
-
-    //         <h2>{product.product_price}</h2>
-    //         <button onClick={() => deleteProduct(product.product_id)}>Remove</button>
-    //     </div>
-    //     )
-    
-    // })
-
-    // const total = mappedCart.reduce((a,b) => ({product.product_price: a.product.product_price + b.product.product_price}))
-
     return (
         <div className='cart-component'>
             <h1 className='cart-review-text'>Review your bag.</h1>
@@ -118,14 +92,7 @@ const Cart = (props) => {
                 <div className='cart-total-number'> ${cartTotal}</div>
             </div>
             <div className="stripeCheckout">
-                  <Link to={'/ordercomplete'}>
-                    <StripeCheckout
-                    description={ "Apple Clone Demonstration" }
-                    token={onToken}
-                    stripeKey={ process.env.REACT_APP_PUB_KEY}
-                    amount={(cartTotal)}
-                    />
-                  </Link>
+                  <button className="stripeCheckout-button" onClick={handleClick} role='link'>Checkout</button>
             </div>
 
         </div>
