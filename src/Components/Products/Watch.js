@@ -27,7 +27,7 @@ function Watch(props){
   return (
     <div className="watch-component">
       <div className='watch-header'>
-        <h3>Apple Watch.</h3>
+        <h3>Apple Watch</h3>
         <div className='watch-content'>
         <div className="watch-photo">
           {select ? (
@@ -38,7 +38,7 @@ function Watch(props){
         </div>
 
         <div className="watch-info">
-          <h1>Buy an Apple Watch</h1>
+          <h1>Buy Apple Watch</h1>
           <h3>Finish</h3>
           <form onClick={selector} className="watch-color">
             <label>

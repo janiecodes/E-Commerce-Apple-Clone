@@ -3,6 +3,7 @@ import { getUser} from "../redux/userReducer";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom';
 
 const Register = ({getUser}) => {
   const [state, setState] = useState({
@@ -66,7 +67,7 @@ const Register = ({getUser}) => {
       <form onSubmit={(e) => registerUser(e)}>
         <div className="register-form-text">
           <p>One Apple ID is all you need to access all Apple services.</p>
-          <p>Already have an Apple ID? Find it here</p>
+          <Link className='link-to-auth' to={'/auth' }><p>Already have an Apple ID?</p></Link>
         </div>
         <div className="register-name-input">
           <input
@@ -83,7 +84,7 @@ const Register = ({getUser}) => {
           />
         </div>
         <div className="register-country-input">
-          <p>COUNTRY/REGION</p>
+          <p className='register-country-title'>COUNTRY/REGION</p>
           <input
           className="register-USA-input"
             placeholder="United States"
@@ -97,39 +98,45 @@ const Register = ({getUser}) => {
             name='birthday'
           />
         </div>
-        <div className="register-email-input">
+        <div className="register-email-password-input">
           <input
+          className="register-email-input"
             placeholder="name@example.com"
             onChange={(e) => changeHandler(e)}
             name='email'
           />
           <input
+          className="register-password-input"
             placeholder="Password"
+            input type='password'
             onChange={(e) => changeHandler(e)}
             name='password'
           />
         </div>
-        <div className="register-phone-input">
+        <div className="register-phone-number">
           <input
+          className="register-phone-input"
             placeholder="Phone number"
             type="number"
             onChange={(e) => changeHandler(e)}
             name='phoneNumber'
           />
         </div>
-        <p>
+        <p className='register-text'>
           Be sure to enter a phone number you can always access. It will be used
           to verify your identity any time you sign in on a new device or web
           browser. Messaging or data rates may apply.
         </p>
         <div className="register-checkbox">
           <p>Verify with:</p>
-          <input className="checkbox-text-message" type="checkbox" />
+          <input className="checkbox-text-message" type="radio" />
           <p>Text message</p>
-          <input className="checkbox-phone-number" type="checkbox" />
+          <input className="checkbox-phone-number" type="radio" />
           <p>Phone call</p>
         </div>
+        <div className='register-button-continue'>
         <button className='register-button' type='submit'>Continue</button>
+        </div>
       </form>
     </div>
   );

@@ -26,17 +26,18 @@ function Mac(props) {
 
 
     return (
+      
         <div className='mac-component'>
+          <header className='macbook-air-header'><h3>Macbook Air</h3></header>
+          <div className='macbook-content'>
             <h1 className='mac-title'>Welcome to the future of Mac</h1>
             <div className="macbook-photo">
           {select ? (
-            <img src={`/assets/macbook-${productId}.jpeg`} />
+            <img className="macbook-photo-selected" src={`/assets/macbook-${productId}.jpeg`} />
           ) : (
-            <img  src={`/assets/macbook-photo.jpg`} />
+            <img  className="macbook-photo-default" src={`/assets/macbook-final.jpeg`} />
           )}
-        </div>
-
-
+            </div>
 
             <form onClick={selector} className='macbook-color'>
                 <div className='first-mac'>
@@ -65,7 +66,7 @@ function Mac(props) {
                 </div>
             </form>
             <button className='macbook-button' onClick={(e) => addItem(e)}>Add to Bag</button>
-
+            </div>
         </div>
     )
 }

@@ -43,6 +43,7 @@ const Auth = ({getUser}) => {
             <input
             className='auth-input-password'
             placeholder='Password'
+            input type='password'
             name='password'
             onChange={(e) => changeHandler(e)}
             />
@@ -53,7 +54,10 @@ const Auth = ({getUser}) => {
             </form>
             <p className='auth-text-forgot'>Forgot your Apple ID or password?</p>
             <Link className='auth-registration-link' to={'/register'}>Don't have an Apple Id? Create one now.</Link>
-        </div>
+            <div className='auth-bottom-text'>
+            <p>Need some help? Chat now or call 1-800-MY-APPLE</p>
+            </div>
+    </div>
     )
 
 }

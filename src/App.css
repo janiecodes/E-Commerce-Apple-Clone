@@ -6,7 +6,7 @@
 
 
 .nav-component {
-    height: 8vh;
+    height: 6vh;
     width: 100vw;
     background-color: #333333;
     /* background-color: #060606; */
@@ -27,12 +27,6 @@ a {
     height: 25px;
 }
 
-
-.cart-dropdown:hover, .cart-dropdown:focus {
-    background-color: white;
-}
-
-
 .dropdown-content {
     background-color: white;
     width: 150px;
@@ -51,9 +45,23 @@ a {
     display: flex;
     flex-direction: column;
     align-items:center;
-    padding-top: 5%;
+
 }
+
+.dashboard-top-text {
+    display: flex;
+    letter-spacing: .009em;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f5f4f6;
+    width: 100%;
+}
+
 .dashboard-logo {
+    padding-top: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,12 +76,16 @@ a {
 .dashboard-links {
     display: flex;  
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
 
 }
 
 .dashboard-links > img {
     height: 50px;
     width: 50px;
+
 }
 
 .auth-component {
@@ -82,7 +94,7 @@ a {
 }
 .auth-title {
     width: 980px;
-    height: 114px;
+    padding-bottom: 32px;
     font-size: 40px;
 }
 
@@ -90,8 +102,7 @@ a {
     margin: 0px 0px 14px;
     width: 410px;
     height: 56px;
-    
-    padding: 18px 16px 0px;
+    padding: 15px 16px 6px;
     line-height: 1.23536;
     font-size: 17px;
     border-radius: 12px;
@@ -99,14 +110,14 @@ a {
     border-style: solid;
     margin-bottom: .82353rem;
     border-color: #d2d2d7;
-
+    
 }
 
 .auth-input-password{
     margin: 0px 0px 14px;
     width: 410px;
     height: 56px;
-    padding: 18px 16px 0px;
+    padding: 15px 16px 6px;
     line-height: 1.23536;
     border-radius: 12px;
     border-width: 1px;
@@ -135,6 +146,7 @@ a {
     min-width: 28px;
     padding: 18px 31px;
     border-radius: 12px;
+    -webkit-font-smoothing: antialiased;
     font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
@@ -142,8 +154,14 @@ a {
     font-size: 14px;
     margin: 0px 0px 35px;
     font-weight: 400;
-    letter-spacing: -.016em;
+    letter-spacing: .05em;
     font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-bottom: 35px;
 }
 
 .auth-text-forgot {
@@ -155,16 +173,27 @@ a {
     color: #0072e4;
     font-size: 17px;
 }
+.auth-bottom-text {
+    font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    padding-top: 35px;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
 
 .register-nav-bar {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+
 }
 
 .register-nav-bar-left {
     font-size: 20px;
     margin-left: 35px;
+    
 }
 
 .register-nav-bar-right {
@@ -172,6 +201,7 @@ a {
     justify-content: space-around;
     width: 35vw;
     font-size: 18px;
+    color: #757575;
 }
 
 .register-header {
@@ -180,14 +210,19 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    background: linear-gradient(to right, #251815 , #201712, #1e1b0e, #4a402e, #56512e, #697668, #557393, #425e82, #30405c, #252737, #242730,  #232228 );
 }
 .register-header-text {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 55px;
-    height: 200px;
+    font-size: 40px;
+    height: 150px;
     margin: 0 auto;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+
 }
 
 .register-form-text {
@@ -196,23 +231,35 @@ a {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    padding-bottom: 25px;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    height: 100px;
 
+}
+
+.link-to-auth{
+    color: #0072e4;
+}
+
+.register-form-text p {
+    margin: 5px;
 }
 
 .register-name-input {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
+    height: 40px;
 
 }
 
 .register-first-name{
-    width: 215px;
+    width: 177px;
     height: 56px;
     font-size: 17px;
     margin-bottom: 14px;
-    padding-top: 18px;
+    margin-right: 25px;
+    padding-top: 15px;
     padding-left: 16px;
     padding-right: 16px;
     color: #333;
@@ -224,11 +271,11 @@ a {
 }
 
 .register-last-name{
-    width: 215px;
+    width: 177px;
     height: 56px;
     font-size: 17px;
     margin-bottom: 14px;
-    padding-top: 18px;
+    padding-top: 15px;
     padding-left: 16px;
     padding-right: 16px;
     color: #333;
@@ -247,7 +294,14 @@ a {
     
 }
 
-
+.register-country-title {
+    display: flex;
+    width: 445px;
+    text-align:left;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
 
 .register-USA-input {
     display: flex;
@@ -255,7 +309,7 @@ a {
     height: 56px;
     font-size: 17px;
     margin-bottom: 14px;
-    padding-top: 18px;
+    padding-top: 15px;
     padding-left: 16px;
     padding-right: 16px;
     color: #333;
@@ -272,7 +326,7 @@ a {
     height: 56px;
     font-size: 17px;
     margin-bottom: 14px;
-    padding-top: 18px;
+    padding-top: 15px;
     padding-left: 16px;
     padding-right: 16px;
     color: #333;
@@ -283,21 +337,108 @@ a {
     background-clip: padding-box;
 }
 
-.register-email-input {
+.register-email-password-input {
     display: flex;
     flex-direction: column;
-    
-    
+    align-items: center;
+    justify-content: center;
 }
 
-.register-phone-input {
+.register-email-input {
+    display: flex;
+    width: 415px;
+    height: 56px;
+    font-size: 17px;
+    margin-bottom: 14px;
+    padding-top: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: #333;
+    text-align: left;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: hsla(0,0%,100%,.8);
+    background-clip: padding-box;
+}
+
+.register-password-input {
+    display: flex;
+    width: 415px;
+    height: 56px;
+    font-size: 17px;
+    margin-bottom: 14px;
+    padding-top: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: #333;
+    text-align: left;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: hsla(0,0%,100%,.8);
+    background-clip: padding-box;
+}
+
+.register-phone-number {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.register-phone-input {
+    display: flex;
+    width: 415px;
+    height: 56px;
+    font-size: 17px;
+    margin-bottom: 14px;
+    padding-top: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: #333;
+    text-align: left;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: hsla(0,0%,100%,.8);
+    background-clip: padding-box;
+}
 
+.register-text {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    font-size: 12px;
+    color: #a2a2a2;
+    letter-spacing: .05em;
+    text-align: center;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 .register-checkbox {
     display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    font-size: 17px;
+    text-align: center;
+    color: #333;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.checkbox-text-message {
+    margin-left: 20px;
+}
+
+.checkbox-phone-number{
+    margin-left: 20px;
+}
+
+.register-button-continue{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
 }
 
 .register-button{
@@ -314,6 +455,13 @@ a {
 
     text-align: center;
 }
+
+.ipad-air-header {
+    font-size: 21px;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    padding-left: 50px;
+}
+
 .ipad-content {
     display: flex;
     flex-direction: row;
@@ -373,7 +521,11 @@ a {
     align-items:center;
     justify-content: center;
 }
-
+.watch-header{
+    font-size: 21px;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    padding-left: 50px;
+}
 .watch-content {
     display: flex;
     flex-direction: row;
@@ -453,7 +605,11 @@ a {
     border: 1px solid #07c;
     border-radius: 4px;
 }
-
+.iphone-header {
+    font-size: 21px;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    padding-left: 50px;
+}
 .iphone-content {
     display: flex;
     flex-direction: row;
@@ -516,16 +672,49 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    width: 100vw;
+
+
+}
+
+.macbook-air-header {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 21px;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    padding-left: 50px;
+}
+
+.macbook-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 75vw;
 
 }
 
+.macbook-photo{
+    display: flex;
+    flex-direction: column;
+}
+
+.macbook-photo-default{
+    width: 500px;
+    height: 300px;
+}
+
+.macbook-photo-selected{
+
+}
+
 .mac-title {
+    font-size: 50px;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
     margin-top: 30px;
     margin-bottom: 5px;
-    color: radial-gradient(ellipse at center, #eff1ff 10%, #000 100%);
-    -webkit-background-clip: text;
 
 }
 
@@ -656,6 +845,11 @@ cart ul {
 
 }
 
+.cart-dropdown{
+    background-color: #333333;
+    color: #f6f4f6;
+    border: none;
+}
 
 .dropdown-item {
     border: none;

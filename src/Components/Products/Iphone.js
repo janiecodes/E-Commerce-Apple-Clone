@@ -27,7 +27,7 @@ function Iphone(props){
     return (
         <div className="iphone-component">
           <div className='iphone-header'>
-            <h3>Blast past fast.</h3>
+            <h3>iPhone Pro</h3>
             <div className='iphone-content'>
             <div className="iphone-photo">
               {select ? (

@@ -5,6 +5,9 @@ const Dashboard = (props) => {
 
     return (
         <div className='dashboard-component'>
+            <div className='dashboard-top-text'>    
+                <p>Shop online and get Specialist help, free no-contact delivery, and more. Get in-stock items with Apple pickup or 2-hour delivery, available in most metros.</p>
+            </div>
             <img className='dashboard-logo' alt='apple' src='https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/holiday-logo-202011?wid=142&hei=174&fmt=png-alpha&qlt=80&.v=1604421337000'/>
             <h1 className='dashboard-message'>Give something wonderful.</h1>
 
