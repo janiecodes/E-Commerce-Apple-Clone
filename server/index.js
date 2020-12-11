@@ -64,7 +64,8 @@ app.post('/api/email',emailCtrl.email)
 app.post('/api/sendSMS',twilioCtrl.sendSMS)
 
 //STRIPE
-app.post('/api/checkout', async (req, res) => {
+app.post('/api/checkout', async (req, res) => {  
+
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     line_items: [
@@ -74,7 +75,7 @@ app.post('/api/checkout', async (req, res) => {
           product_data: {
             name: 'Apple',
           },
-          unit_amount: 10000,
+          unit_amount: 149800,
         },
         quantity: 1,
       },
@@ -93,3 +94,4 @@ app.get('*', (req, res) => {
 })
 
 app.listen(SERVER_PORT, () => console.log(`Connected to port ${SERVER_PORT}`))
+
