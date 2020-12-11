@@ -64,6 +64,7 @@ app.post('/api/email',emailCtrl.email)
 app.post('/api/sendSMS',twilioCtrl.sendSMS)
 
 //STRIPE
+app.get('/api/cart/me', checkUser, cartCtrl.getCartByUser) 
 app.post('/api/checkout', async (req, res) => {  
 
   const session = await stripe.checkout.sessions.create({
@@ -75,7 +76,7 @@ app.post('/api/checkout', async (req, res) => {
           product_data: {
             name: 'Apple',
           },
-          unit_amount: 149800,
+          unit_amount: 319700,
         },
         quantity: 1,
       },
@@ -86,7 +87,8 @@ app.post('/api/checkout', async (req, res) => {
   });
 
   res.json({ id: session.id });
-});
+})
+
 
 //HOSTING
 app.get('*', (req, res) => {
