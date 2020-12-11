@@ -41,7 +41,7 @@ class Email extends Component {
           <input style={styles.input} placeholder='Full Name' type="text" name='name' value={name} onChange={this.handleInput} />
           <input style={styles.input} placeholder='Email' type="text" name='email' value={email} onChange={this.handleInput} />
           <input style={styles.input} placeholder='Message' type="text" name='message' value={message} onChange={this.handleInput} />
-         <Link to={'/'}> <button style={styles.button} onClick={this.handleSend}>Send</button></Link>
+         <button style={styles.button} onClick={this.handleSend}>Send</button>
         </div>
       </div>
     )
