@@ -15,13 +15,14 @@ const Auth = ({getUser}) => {
 
     const loginUser = async (e) => {
         e.preventDefault()
+        console.log('HELLO')
         const {
             email,
             password,
         } = state;
 
     try {
-        const user = await axios.post(`auth/login`, {email, password})
+        const user = await axios.post(`/auth/login`, {email, password})
         getUser(user.data)
         history.push('/')
     }catch(error){
@@ -50,7 +51,7 @@ const Auth = ({getUser}) => {
             <section>
                 <p className='auth-text'>Your Apple ID is the email address you use to sign in to iTunes, the App Store, and iCloud.</p>
             </section>
-            <Link to={'/'}><button className='auth-sign-in-button' type='submit'>Sign In</button></Link>
+            <button className='auth-sign-in-button' type='submit'>Sign In</button>
             </form>
             <p className='auth-text-forgot'>Forgot your Apple ID or password?</p>
             <Link className='auth-registration-link' to={'/register'}>Don't have an Apple Id? Create one now.</Link>

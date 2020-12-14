@@ -135,7 +135,7 @@ const Register = ({getUser}) => {
           <p>Phone call</p>
         </div>
         <div className='register-button-continue'>
-        <Link to={'/'}><button className='register-button' type='submit'>Continue</button></Link>
+        <button className='register-button' type='submit'>Continue</button>
         </div>
       </form>
     </div>
