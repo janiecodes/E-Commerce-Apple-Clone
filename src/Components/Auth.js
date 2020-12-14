@@ -50,7 +50,7 @@ const Auth = ({getUser}) => {
             <section>
                 <p className='auth-text'>Your Apple ID is the email address you use to sign in to iTunes, the App Store, and iCloud.</p>
             </section>
-            <button className='auth-sign-in-button' type='submit'>Sign In</button>
+            <Link to={'/'}><button className='auth-sign-in-button' type='submit'>Sign In</button></Link>
             </form>
             <p className='auth-text-forgot'>Forgot your Apple ID or password?</p>
             <Link className='auth-registration-link' to={'/register'}>Don't have an Apple Id? Create one now.</Link>
