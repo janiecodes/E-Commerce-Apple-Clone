@@ -82,8 +82,8 @@ app.post('/api/checkout', async (req, res) => {
       },
     ],
     mode: 'payment',
-    success_url: 'http://198.211.106.205:3012',
-    cancel_url: 'http://198.211.106.205:3012/cancel',
+    success_url: 'https://198.211.106.205:3012',
+    cancel_url: 'https://198.211.106.205:3012/cancel',
   });
 
   res.json({ id: session.id });
