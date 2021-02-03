@@ -29,6 +29,7 @@ const Auth = ({getUser}) => {
         console.log(error)
     }
     }
+    
     const changeHandler = e => setState({...state, [e.target.name]: e.target.value})
     return(
         <div className='auth-component'>
