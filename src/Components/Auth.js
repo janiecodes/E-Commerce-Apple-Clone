@@ -15,7 +15,7 @@ const Auth = ({getUser}) => {
 
     const loginUser = async (e) => {
         e.preventDefault()
-        console.log('HELLO')
+        console.log('HELLO AUTH')
         const {
             email,
             password,

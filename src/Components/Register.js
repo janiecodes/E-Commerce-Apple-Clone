@@ -19,6 +19,7 @@ const Register = ({getUser}) => {
 
   const registerUser = async (e) => {
     e.preventDefault();
+    console.log('HELLO REGISTERED')
     const {
       firstName,
       lastName,
